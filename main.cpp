@@ -11,6 +11,7 @@ int main(){
 	Conjunto<int> conjuntoA;
 	Conjunto<int> conjuntoB;
 	Conjunto<int> conjuntoC;
+	Conjunto<int> conjuntoD;
 	
 	/* adiciona elementos */
 	conjuntoA.add(1);
@@ -19,16 +20,21 @@ int main(){
 	conjuntoA.add(7);
 	conjuntoA.getElementos();
 		
-	conjuntoB.add(2);
-	conjuntoB.add(4);
-	conjuntoB.add(6);
-	conjuntoB.add(8);
+	conjuntoB.add(0);
+	conjuntoB.add(3);
+	conjuntoB.add(10);
+	conjuntoB.add(30);
 	conjuntoB.add(conjuntoA);
 	conjuntoB.getElementos();
 	
-	cout << "\n\n\n" << endl;
-	conjuntoA + conjuntoB;
-	conjuntoA.getElementos();
+	cout << endl << endl;
 
+
+	conjuntoC = conjuntoA + conjuntoB;
+	conjuntoC.getElementos();
+	
+	cout << endl << endl;
+	conjuntoD = conjuntoC - conjuntoA;
+	conjuntoD.getElementos();
 	return 0;
 }
